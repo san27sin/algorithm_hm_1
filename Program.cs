@@ -4,6 +4,9 @@ namespace algorithm_hm_1
 {
     class Program
     {
+        /// <summary>
+        /// Класс для проверки работы функции "Простое число"
+        /// </summary>
         public class TestCaseForSimpleNumber
         {
             //диапазон
@@ -46,6 +49,10 @@ namespace algorithm_hm_1
 
         }
 
+        /// <summary>
+        /// Проверочный метод для простого числа
+        /// </summary>
+        /// <param name="testCase1"></param>
         static public void TestSimpleNumber(TestCaseForSimpleNumber testCase1)
         {
             if(CheckNumber(testCase1.PassedNumber, 0, 2)==testCase1.ExpectedAnswer)
@@ -90,6 +97,10 @@ namespace algorithm_hm_1
             }      
         }
 
+
+        /// <summary>
+        /// Проверочный класс для фибоначи
+        /// </summary>
         public class TestCaseForFib
         {
             private int passedNumber;
@@ -108,6 +119,10 @@ namespace algorithm_hm_1
             }
         }
 
+        /// <summary>
+        /// Проверочный метод
+        /// </summary>
+        /// <param name="test">Вставляем проверочный тест</param>
         public static void TestFib(TestCaseForFib test)
         {
             string fibCycle = FibCycle(test.PassedNumber) == test.ExpectedNumber ? "correct" : "incorrect";
@@ -115,6 +130,12 @@ namespace algorithm_hm_1
             Console.WriteLine($"Методы: \"Фибоначи через цикл\": {fibCycle}\t\"Фибоначи через рекурсию\": {fibRec}\t ");
         }
 
+
+        /// <summary>
+        /// Поиск числа фибоначи через рекурсию
+        /// </summary>
+        /// <param name="n">Ввод номера числа</param>
+        /// <returns></returns>
         static public int FibRecursion(int n)
         {
             if (n == 0 || n == 1)
@@ -123,6 +144,12 @@ namespace algorithm_hm_1
             return FibRecursion(n - 1) + FibRecursion(n - 2);
         }
 
+
+        /// <summary>
+        /// Поиск числа фибоначи через цикл
+        /// </summary>
+        /// <param name="n">Ввод номера числа</param>
+        /// <returns></returns>
         static public int FibCycle(int n)
         {
             if (n == 0)
